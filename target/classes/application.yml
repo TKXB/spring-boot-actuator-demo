@@ -1,0 +1,19 @@
+management:
+  port: 12345   #actuator接口使用的端口，为了和业务api接口使用的端口进行分离
+  context-path: /monitor  #接口前缀
+  security:
+    enabled: true   #启用actuator安全功能
+
+#  关闭不需要的接口
+endpoints:
+  shutdown:
+    enabled: true
+
+# 对actuator接口设置账号密码校验
+security:
+  basic:
+    path: /monitor
+  user:
+    name: ezviz
+    password: hik@888888
+
